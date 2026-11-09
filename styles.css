@@ -1,0 +1,30 @@
+:root { font-family: "Segoe UI", Arial, sans-serif; color: #2f3040; background: #f5f3fa; line-height: 1.6; }
+* { box-sizing: border-box; }
+body { margin: 0; background: radial-gradient(ellipse at top right, #e9e1f5, transparent 65%); }
+main { width: min(100%, 780px); margin: auto; padding: 56px 24px 32px; }
+.eyebrow { color: #69568b; text-transform: uppercase; letter-spacing: .14em; font-size: .72rem; font-weight: 700; }
+h1 { font-family: Georgia, serif; font-size: clamp(2.6rem, 8vw, 4.5rem); font-weight: 400; line-height: 1.15; letter-spacing: -.04em; margin: 18px 0; }
+.intro { color: #626071; margin-bottom: 32px; }
+.card { background: #fff; border: 1px solid #d8d1e4; border-radius: 20px; padding: 30px; box-shadow: 0 14px 40px #3b215208; }
+h2 { font-size: 1.1rem; margin: 0; }
+.hint { font-size: .8rem; color: #646174; }
+.fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-top: 24px; }
+label { display: block; font-weight: 600; font-size: .9rem; margin-bottom: 8px; }
+input { width: 100%; min-width: 0; min-height: 52px; font: inherit; color: #2f3040; background: #fcfbfe; border: 1px solid #9c91af; border-radius: 8px; padding: 10px; }
+input[aria-invalid="true"] { border: 2px solid #a02e3e; }
+input:focus-visible, button:focus-visible { outline: 3px solid #7454a4; outline-offset: 3px; }
+button { display: flex; justify-content: space-between; width: 100%; min-height: 52px; margin-top: 22px; padding: 14px 18px; border: 0; border-radius: 9px; font: inherit; font-weight: 600; background: #67468d; color: #fff; cursor: pointer; }
+button:hover:not(:disabled) { background: #50336f; }
+button:disabled { background: #dfd9e8; color: #62596c; cursor: not-allowed; }
+#error { color: #a02e3e; margin-bottom: 0; font-size: .9rem; }
+#error:empty { display: none; }
+#result { border-top: 1px solid #e0dbe9; padding-top: 26px; margin-top: 28px; }
+.age-values { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 20px; }
+.age-values div { text-align: center; background: #f4f0fa; border-radius: 12px; padding: 18px 4px; }
+.age-values strong { display: block; font-size: clamp(1.6rem, 7vw, 3rem); font-weight: 650; color: #67468d; line-height: 1.3; }
+.age-values span { font-size: .85rem; color: #646174; }
+aside { padding: 28px 0; }
+aside p, footer { color: #646174; font-size: .8rem; }
+footer { border-top: 1px solid #d8d1e4; padding-top: 20px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media (max-width: 500px) { main { padding: 28px 16px; } .card { padding: 22px 18px; } .fields { grid-template-columns: 1fr; gap: 14px; } }
