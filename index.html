@@ -6,6 +6,7 @@
   <meta name="description" content="Calculate age in completed calendar years, months, and days.">
   <title>Age Calculator</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="calendar.js" defer></script>
   <script src="app.js" defer></script>
 </head>
 <body>
@@ -23,10 +24,9 @@
           <div><label for="birth-date">Date of Birth</label><input type="date" id="birth-date" name="birth-date" min="0001-01-01" max="9999-12-31" required aria-describedby="date-hint error"></div>
           <div><label for="calculation-date">Calculate Age On</label><input type="date" id="calculation-date" name="calculation-date" min="0001-01-01" max="9999-12-31" required aria-describedby="date-hint error"><p class="hint">Starts with today. Change it to any date.</p></div>
         </div>
-        <button type="submit" id="calculate" disabled>Calculate age <span aria-hidden="true">→</span></button>
+        <button type="submit" id="calculate">Calculate age <span aria-hidden="true">→</span></button>
         <p id="error" role="alert"></p>
       </form>
-      <p id="preview-note" class="hint">Layout preview. Age calculations are coming next.</p>
       <section id="result" aria-labelledby="result-title" hidden>
         <h2 id="result-title">Your age on this date</h2>
         <div class="age-values">
