@@ -10,8 +10,21 @@ button, and a results area showing completed years, months, and days.
 Calculate Age On will default to today's date in the user's local time zone
 when the page opens. Users can change it to another date.
 
-This repository currently contains the README only. The app will be built on
-`develop` in the milestones below.
+All three milestones are implemented on `develop`. The `main` branch still
+contains the initial README, pending review and a requested merge.
+
+## Open on Windows
+
+1. On GitHub, select the `develop` branch and choose **Code > Download ZIP**.
+2. In File Explorer, right-click the ZIP and choose **Extract All**.
+3. Open the extracted folder and double-click `index.html` to open it in Edge
+   or Chrome. Keep `styles.css`, `calendar.js`, and `app.js` in the same folder.
+4. Enter **Date of Birth**, check **Calculate Age On**, and choose **Calculate
+   age**. Pressing Enter from a form input also submits the form.
+
+JavaScript must be enabled. No installation or server is required. The GitHub
+link shows source files, not a hosted running app. Date controls may display
+dates in your browser's regional format; the calculations use calendar dates.
 
 ## Calendar rules
 
@@ -32,7 +45,7 @@ For example, January 31 to February 28, 2025 is one completed month under this
 convention. A February 29 birthday reaches its annual anniversary on February
 28 in a non-leap year. These are calculation conventions, not legal age rules.
 
-## Planned milestones
+## Development milestones
 
 1. Build the labeled date inputs, Calculate button, and results area; default
    the calculation date to local today.
@@ -43,7 +56,8 @@ convention. A February 29 birthday reaches its annual anniversary on February
 3. Test the calculator and document Windows opening instructions, passed
    checks, and any remaining verification limits.
 
-Commit and push each milestone separately on `develop`, then pause for review.
+Each milestone has a separate commit and push on `develop`. After setup, the
+user requested completion of all three milestones without intermediate pauses.
 
 ## Test cases
 
@@ -80,6 +94,21 @@ Also check:
 Use automated tests for calendar logic and UI wiring, plus actual browser
 checks where available. Record passed checks and pending browser checks
 separately; simulated UI tests do not replace browser review.
+
+## Verification results
+
+Run `node --test calendar.test.js` with Node.js to repeat the tests.
+
+- **16 automated tests passed:** all 11 table examples, missing and invalid
+  inputs, reversed dates, century leap rules, years below 100, daylight-saving
+  and time-zone independence, local today initialization, and UI wiring.
+- The UI checks cover displayed ages, clearing stale results, error focus,
+  validation attributes, and recalculation. They use a simulated document.
+- JavaScript syntax checks, HTML labels and asset links, and Git whitespace
+  checks passed.
+- Actual Edge/Chrome visual, keyboard, and date-picker checks on Windows remain
+  pending. The managed environment's required browser tool was unavailable;
+  no real browser verification is claimed.
 
 ## Git workflow
 
